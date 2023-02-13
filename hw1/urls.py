@@ -28,7 +28,7 @@ urlpatterns = [
     path('article/<int:article_number>/archive/', third_dynamic_url),
     path('article/<int:article_number>/<slug:slug_text>/', fourth_dynamic_url),
     path('users/<int:users_number>/', fifth_dynamic_url),
-    re_path(r'^(?P<regular>([1-9a-f-])({,4})', regex),
-    #re_path(r'^(?P<reg>[1-9a-f-].{6})', phone),
+    re_path(r'^(?P<regular>[0-9a-f]{4}-[0-9A-z]{6})$', regex),
+    re_path(r'^(?P<reg>(0(39|67|68|96|97|98|50|66|95|99|63|73|93)\d{7})/)$', phone),
 
 ]
